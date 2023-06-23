@@ -1,0 +1,74 @@
+-- create database IMDB
+use IMDB;
+-- CREATE TABLE Movie (
+--   movie_id INT AUTO_INCREMENT PRIMARY KEY,
+--   title VARCHAR(255) NOT NULL,
+--   release_date DATE,
+--   duration INT,
+--   rating DECIMAL(3,1)
+-- );
+
+-- CREATE TABLE Media (
+--   media_id INT AUTO_INCREMENT PRIMARY KEY,
+--   movie_id INT,
+--   media_type ENUM('Video', 'Image'),
+--   media_url VARCHAR(255),
+--   FOREIGN KEY (movie_id) REFERENCES Movie(movie_id)
+-- );
+
+-- CREATE TABLE Genre (
+--   genre_id INT AUTO_INCREMENT PRIMARY KEY,
+--   name VARCHAR(255) NOT NULL
+-- );
+
+-- CREATE TABLE MovieGenre (
+--   movie_id INT,
+--   genre_id INT,
+--   PRIMARY KEY (movie_id, genre_id),
+--   FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
+--   FOREIGN KEY (genre_id) REFERENCES Genre(genre_id)
+-- );
+
+-- CREATE TABLE Review (
+--   review_id INT AUTO_INCREMENT PRIMARY KEY,
+--   movie_id INT,
+--   user_id INT,
+--   rating INT,
+--   title VARCHAR(255) NOT NULL,
+--   comment TEXT,
+--   FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
+--   FOREIGN KEY (user_id) REFERENCES User(user_id)
+-- );
+
+-- CREATE TABLE User (
+--   user_id INT AUTO_INCREMENT PRIMARY KEY,
+--   name VARCHAR(255) NOT NULL,
+--   email VARCHAR(255) NOT NULL
+-- );
+
+-- CREATE TABLE Artist (
+--   artist_id INT AUTO_INCREMENT PRIMARY KEY,
+--   name VARCHAR(255) NOT NULL
+-- );
+
+-- CREATE TABLE Skill (
+--   skill_id INT AUTO_INCREMENT PRIMARY KEY,
+--   skill_name VARCHAR(255) NOT NULL
+-- );
+
+-- CREATE TABLE ArtistSkill (
+--   artist_id INT,
+--   skill_id INT,
+--   PRIMARY KEY (artist_id, skill_id),
+--   FOREIGN KEY (artist_id) REFERENCES Artist(artist_id),
+--   FOREIGN KEY (skill_id) REFERENCES Skill(skill_id)
+-- );
+
+-- CREATE TABLE Performance (
+--   performance_id INT AUTO_INCREMENT PRIMARY KEY,
+--   movie_id INT,
+--   artist_id INT,
+--   role VARCHAR(255),
+--   FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
+--   FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+-- );
